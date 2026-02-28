@@ -19,7 +19,7 @@ class info:public one
 {
     public:
 	char name[50],time[50];
-	int num,age;
+	int num,age,Criticality_Status;
 	void get()
 	   {
 	  
@@ -33,6 +33,8 @@ class info:public one
 		cin>>age;
 		cout<<"\nEnter Appoinment No =";
 		cin>>num;
+		cout<<"\nEnter The Patient's Criticality Status(By entering a number a number from 1 to 5) =";
+		cin.getline(Criticality_Status,50);
 		}
 		void show()
 		{
@@ -40,18 +42,19 @@ class info:public one
 			cout<<"\nAge ="<<age;
 			cout<<"\nNo ="<<num;
 			cout<<"\nTime ="<<time;
+			cout<<"\nCriticality_Status ="<<Criticality_Status;
 		}
 		
 };
 
-class rana:public info
+class AK_Gupta:public info
 {
 	public:
 	info a1;
 	void get()
 	{
 	//	system("cls");
-		ofstream out("Rana.txt",ios::app|ios::binary);
+		ofstream out("AK_Gupta.txt",ios::app|ios::binary);
 		a1.get();
 		out.write((char*)&a1,sizeof(info));
 		out.close();
@@ -61,7 +64,7 @@ class rana:public info
 	}
 	void show()
 	{
-		ifstream in("rana.txt");
+		ifstream in("AK_Gupta.txt");
 		if(in==NULL)
 		{
 			cout<<"\n\nNo Data In the File ";
@@ -82,14 +85,14 @@ class rana:public info
 		menu();
 	}}
 };
-class attash:public info
+class S_Kumar:public info
 {
 	public:
 	info a1;
 	void get()
 	{
 	//	system("cls");
-		ofstream out("attash.txt",ios::app|ios::binary);
+		ofstream out("S_Kumar.txt",ios::app|ios::binary);
 		a1.get();
 		out.write((char*)&a1,sizeof(info));
 		out.close();
@@ -123,14 +126,14 @@ class attash:public info
 	}}
 	
 };
-class bahadur:public info
+class BS_Jain:public info
 {
 	public:
 	info a1;
 	void get()
 	{
 	//	system("cls");
-		ofstream out("bahadur.txt",ios::app|ios::binary);
+		ofstream out(".txt",ios::app|ios::binary);
 		a1.get();
 		out.write((char*)&a1,sizeof(info));
 		out.close();
@@ -140,7 +143,7 @@ class bahadur:public info
 	}
 		void show()
 	{
-		ifstream in("bahadur.txt");
+		ifstream in("BS_Jain.txt");
 		if(in==NULL)
 		{
 			cout<<"No Data In the File ";
@@ -225,19 +228,19 @@ class information
 	cout<<"\n\n\t\t(Three Doctor Available) \n\n \t\t[Infotmation And Timing Are Given Below]\n";
 	cout<<"-----------------------------------------------------------------------------\n";
 	cout<<"\t\tDr Available:\n";
-	cout<<"\t\tDr. Rana (skin specialist)\n\n";
+	cout<<"\t\tDr. AK_Gupta (skin specialist)\n\n";
 	cout<<"\t\t\t [[Timing]]:\n\n";
 	cout<<"\tMonday To Friday\t\t9AM TO 5PM\n";
 	cout<<"\tSatuday         \t\t9AM TO 1PM\n";
 	cout<<"\tSunday          \t\t Off\n";
 	cout<<"\n------------------------------------------------------------------------------\n";
-	cout<<"\t\tDr. Bahadur (child specialist)\n\n";
+	cout<<"\t\tDr. BS_Jain (child specialist)\n\n";
 	cout<<"\t\t\t [[Timing]]:\n\n";
 	cout<<"\tMonday To Friday\t\t2PM TO 10PM\n";
 	cout<<"\tSatuday         \t\t8AM TO 1PM\n";
 	cout<<"\tSunday          \t\t12PM TO 9PM\n";
 	cout<<"\n------------------------------------------------------------------------------\n";
-	cout<<"\t\tDr. Attash (DVM)\n\n";
+	cout<<"\t\tDr. S_Kumar (DVM)\n\n";
 	cout<<"\t\t\t [[Timing]]:\n\n";
 	cout<<"\tMonday To Friday\t\t8AM TO 5PM\n";
 	cout<<"\tSatuday         \t\t10AM TO 1PM\n";
@@ -253,13 +256,13 @@ void call_dr()
 {
 //	system("cls");
 	int choice;
-	cout<<"\n\n\n\t\tPress 1 for Dr Rana Ayaz \n\n\t\t Press 2 for Dr Attash \n\n\t\t Press 3 for Dr Bahadur ";
+	cout<<"\n\n\n\t\tPress 1 for Dr AK_Gupta \n\n\t\t Press 2 for Dr S_Kumar \n\n\t\t Press 3 for Dr Bahadur ";
 	cin>>choice;
 	
 	one *ptr;
-	rana s3;
-	attash s4;
-	bahadur s5;
+	AK_GUPta s3;
+	S_Kumar s4;
+	BS_Jain s5;
 	if(choice==1)
 	{
 	ptr=&s3;
@@ -290,13 +293,13 @@ void pinfoshow()
 {
 //	system("cls");
 	int choice;
-	cout<<"\n\n\t 1 -Press 1 for Dr Rana Ayaz \n\n\t 2-  Press 2 for Dr Attash \n\n\t 3-  Press 3 for Dr Bahadur ";
+	cout<<"\n\n\t 1 -Press 1 for Dr AK_Gupta \n\n\t 2-  Press 2 for Dr S_Kumar \n\n\t 3-  Press 3 for Dr BS_Jain ";
 	cout<<"Please Enter Your Choice :";
 	cin>>choice;
 	one *ptr;
-	rana s3;
-	attash s4;
-	bahadur s5;
+	AK_Gupta s3;
+	S_Kumar s4;
+	BS_Jain s5;
 	if(choice==1)
 	{
 		ptr=&s3;
@@ -389,3 +392,4 @@ int main()
 		menu();
 
 }
+
