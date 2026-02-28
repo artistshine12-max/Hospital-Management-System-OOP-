@@ -34,7 +34,7 @@ class info:public one
 		cout<<"\nEnter Appoinment No =";
 		cin>>num;
 		cout<<"\nEnter The Patient's Criticality Status(By entering a number a number from 1 to 5) =";
-		cin.getline(Criticality_Status,50);
+		cin>>Criticality_Status;
 		}
 		void show()
 		{
@@ -102,7 +102,7 @@ class S_Kumar:public info
 	}
 	void show()
 	{
-		ifstream in("attash.txt");
+		ifstream in("S_Kumar.txt");
 		if(in==NULL)
 		{
 			cout<<"No Data In the File ";
@@ -133,7 +133,7 @@ class BS_Jain:public info
 	void get()
 	{
 	//	system("cls");
-		ofstream out(".txt",ios::app|ios::binary);
+		ofstream out("BS_Jain.txt",ios::app|ios::binary);
 		a1.get();
 		out.write((char*)&a1,sizeof(info));
 		out.close();
@@ -256,11 +256,11 @@ void call_dr()
 {
 //	system("cls");
 	int choice;
-	cout<<"\n\n\n\t\tPress 1 for Dr AK_Gupta \n\n\t\t Press 2 for Dr S_Kumar \n\n\t\t Press 3 for Dr Bahadur ";
+	cout<<"\n\n\n\t\tPress 1 for Dr AK_Gupta \n\n\t\t Press 2 for Dr S_Kumar \n\n\t\t Press 3 for Dr BS_Jain ";
 	cin>>choice;
 	
 	one *ptr;
-	AK_GUPta s3;
+	AK_Gupta s3;
 	S_Kumar s4;
 	BS_Jain s5;
 	if(choice==1)
@@ -392,5 +392,6 @@ int main()
 		menu();
 
 }
+
 
 
