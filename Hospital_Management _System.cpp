@@ -228,19 +228,19 @@ class information
 	cout<<"\n\n\t\t(Three Doctor Available) \n\n \t\t[Infotmation And Timing Are Given Below]\n";
 	cout<<"-----------------------------------------------------------------------------\n";
 	cout<<"\t\tDr Available:\n";
-	cout<<"\t\tDr. AK_Gupta (skin specialist)\n\n";
+	cout<<"\t\tDr. AK_Gupta (Gynaecologist)\n\n";
 	cout<<"\t\t\t [[Timing]]:\n\n";
 	cout<<"\tMonday To Friday\t\t9AM TO 5PM\n";
 	cout<<"\tSatuday         \t\t9AM TO 1PM\n";
 	cout<<"\tSunday          \t\t Off\n";
 	cout<<"\n------------------------------------------------------------------------------\n";
-	cout<<"\t\tDr. BS_Jain (child specialist)\n\n";
+	cout<<"\t\tDr. BS_Jain (Orthopaedic Surgeon)\n\n";
 	cout<<"\t\t\t [[Timing]]:\n\n";
 	cout<<"\tMonday To Friday\t\t2PM TO 10PM\n";
 	cout<<"\tSatuday         \t\t8AM TO 1PM\n";
 	cout<<"\tSunday          \t\t12PM TO 9PM\n";
 	cout<<"\n------------------------------------------------------------------------------\n";
-	cout<<"\t\tDr. S_Kumar (DVM)\n\n";
+	cout<<"\t\tDr. S_Kumar (General Physician)\n\n";
 	cout<<"\t\t\t [[Timing]]:\n\n";
 	cout<<"\tMonday To Friday\t\t8AM TO 5PM\n";
 	cout<<"\tSatuday         \t\t10AM TO 1PM\n";
@@ -392,4 +392,5 @@ int main()
 		menu();
 
 }
+
 
