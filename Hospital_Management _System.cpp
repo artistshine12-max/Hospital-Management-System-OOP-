@@ -75,11 +75,10 @@ class AK_Gupta:public info
 		}
 		else{
 		
-		while(!in.eof())
-		{
-         in.read((char*)&a1,sizeof(a1));
-       	a1.show();
-		}
+		while(in.read((char*)&a1, sizeof(a1)))
+{
+    a1.show();
+}
 		in.close();
 		getch();
 		menu();
@@ -269,14 +268,14 @@ void call_dr()
 	ptr->get();
 
    } 
-   if(choice==2)
+  else if(choice==2)
    {
    	ptr=&s4;
    	ptr->get();
   
    	
 	} 
-	if(choice==3)
+	else if(choice==3)
 	{
 	ptr=&s5;
 	ptr->get();
@@ -392,6 +391,7 @@ int main()
 		menu();
 
 }
+
 
 
 
