@@ -65,7 +65,7 @@ class AK_Gupta:public info
 	void show()
 	{
 		ifstream in("AK_Gupta.txt");
-		if(in==NULL)
+		if(!in)
 		{
 			cout<<"\n\nNo Data In the File ";
 			cout<<"\n\n\t\tPress Any key To Continue : ";
@@ -102,7 +102,7 @@ class S_Kumar:public info
 	void show()
 	{
 		ifstream in("S_Kumar.txt");
-		if(in==NULL)
+		if(!in)
 		{
 			cout<<"No Data In the File ";
 			cout<<"\nPress Any key To Continue : ";
@@ -334,7 +334,7 @@ void menu()
         
         
         cout<<"\t\t    |   ++++++++++  MAIN MENU   +++++++++  |  \n";
-        cout<<"\t\t    |    [[[  Hospital Management system  ]]]  |\n";
+        cout<<"\t\t    |    [[[  MEDICONNECT ]]]  |\n";
         cout<<"\t\t    |======================================|   \n";
         
         cout<<"\n--------------------------------------------------------------------------------\n";
@@ -391,6 +391,7 @@ int main()
 		menu();
 
 }
+
 
 
 
